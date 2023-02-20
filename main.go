@@ -34,5 +34,8 @@ func main()  {
 		}()
 		log.Println(<-ch)
 	}
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 }
 
